@@ -12,6 +12,7 @@ public class MyFunctions
         var frm = new MainWindow();
         frm.Show();
 
+
         return "Hello " + name;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Xaml.Behaviors.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,24 @@ namespace WpfTest
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainWindowViewModel _viewModel { get; }
+
         public MainWindow()
         {
+            _viewModel = new MainWindowViewModel();
+            DataContext = _viewModel;
+
             InitializeComponent();
+        }
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            TestPost();
+        }
+
+        public async void TestPost()
+        {
+            var test = await HttpPostCall.SetTestValue();
         }
     }
 }

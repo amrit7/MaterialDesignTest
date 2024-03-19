@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="Black"
+        Background="White"
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
         FontFamily="{materialDesign:MaterialDesignFont}"
@@ -23,5 +23,7 @@
             <ColumnDefinition Width="300"/>
         </Grid.ColumnDefinitions>
         <TextBlock Grid.ColumnSpan="2" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">TEST WPF with EXCELDNA</TextBlock>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="198,60,0,0" Grid.Row="2" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="ButtonCommand" HorizontalAlignment="Left" Margin="431,60,0,0" Grid.Row="2" VerticalAlignment="Top" Command="{Binding SetValueCommand}"/>
     </Grid>
 </Window>
